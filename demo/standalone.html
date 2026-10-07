@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Signal Board</title>
+<link rel="stylesheet" href="https://use.typekit.net/ylc4ofo.css">
+<style>
+  :root { --navy:#26394D; --mid:#4D7399; --sky:#6699CC; --pale:#AABFD5; --charcoal:#3D454D; --ok:#3d8a82; --warn:#b58a3c; --crit:#b53c3c;
+    --body:'komet','Segoe UI',Arial,sans-serif; --fg:#3D454D; --fg-strong:#26394D; --fg-soft:#566372; --fg-faint:#8a95a1;
+    --rule:rgba(38,57,77,0.12); --card:#ffffff; --card-bd:#e6e8ec; --code-bg:#f4f6f9; --chip:rgba(102,153,204,0.16); }
+  :root[data-theme="dark"] { --fg:rgba(255,255,255,.9); --fg-strong:#fff; --fg-soft:rgba(255,255,255,.68); --fg-faint:rgba(255,255,255,.42);
+    --rule:rgba(255,255,255,.14); --card:#20303f; --card-bd:#2f4254; --code-bg:#1b2836; --chip:rgba(102,153,204,.28); }
+  html, body { margin:0; background:#F4F6F9; color:var(--fg); font-family:var(--body); }
+  :root[data-theme="dark"] body { background:#182431; }
+  .wrap { max-width:1500px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { font-weight:900; color:var(--fg-strong); font-size:clamp(24px,3vw,36px); margin:0 0 4px; }
+  .sub { color:var(--fg-soft); margin:0 0 18px; font-size:15px; line-height:1.45; max-width:900px; }
+  .foot { margin-top:22px; font-size:12px; color:var(--fg-faint); }
+  .foot a { color:var(--mid); }
+  /*@radar.css*/
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Signal board</h1>
+  <p class="sub">A synthetic Phase III study (24 sites, 480 randomized patients) with per-patient flags built from IRT dispensing events and site supply events. Rule-based and illustrative: the weights are a starting rule, not a model, and invented data cannot validate one. Step the study clock, pick a site, open a patient. Switch the lens to see what each team can see on its own, and read the table under each patient for who holds that evidence today. Nothing here is real data.</p>
+  <div id="radar"></div>
+  <p class="foot">Companion to "Beyond Dispensing: How Supply Chain Data Can Predict and Prevent Patient Dropout", IRT &amp; RTSM 2026, 7 October 2026. Prepared by Bryan Clayton, M.S., BC Consulting Group LLC. Source and method: <a href="https://github.com/TubadoG/Informa2026">github.com/TubadoG/Informa2026</a>.</p>
+</div>
+<!--@study-->
+<!--@radar.js-->
+<script>
+  (function(){
+    var data = JSON.parse(document.getElementById('study-data').textContent);
+    new Radar.Radar(document.getElementById('radar'), data, { week: 24, lens: 'joined' });
+  })();
+</script>
+</body>
+</html>

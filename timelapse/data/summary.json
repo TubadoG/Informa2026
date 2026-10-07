@@ -1,0 +1,79 @@
+{
+  "study": "AURORA-301",
+  "seed": 301,
+  "goLive": {
+    "day": 0,
+    "date": "2027-01-04"
+  },
+  "firstSiteActivated": {
+    "day": 21,
+    "date": "2027-01-25"
+  },
+  "lastSiteActivated": {
+    "day": 730,
+    "date": "2029-01-03"
+  },
+  "enrollmentClosed": {
+    "day": 778,
+    "date": "2029-02-20"
+  },
+  "lastPatientLastVisit": {
+    "day": 1146,
+    "date": "2030-02-23"
+  },
+  "databaseLock": {
+    "day": 1262,
+    "date": "2030-06-19",
+    "months": 41.5
+  },
+  "sites": 50,
+  "subjectsScreened": 1293,
+  "screenFailures": {
+    "eligibility_not_met": 265,
+    "enrollment_closed": 28
+  },
+  "subjectsRandomized": 1000,
+  "subjectsByArm": {
+    "Placebo": 500,
+    "Active": 500
+  },
+  "completion": {
+    "completed": 906,
+    "withdrawn": 57,
+    "lost_to_follow_up": 21,
+    "other": 16
+  },
+  "outOfWindowVisits": 169,
+  "kits": 3940,
+  "kitsDispensed": 3848,
+  "kitsNeverDispensed": {
+    "expired": 67,
+    "unused_at_close_out": 25
+  },
+  "kitsFinal": {
+    "reconciled": 3871,
+    "lost": 69
+  },
+  "emergencyShipments": 7,
+  "events": 24140,
+  "eventTypes": {
+    "study.go_live": 1,
+    "site.activated": 50,
+    "subject.screened": 1293,
+    "kit.received": 3940,
+    "subject.randomized": 1000,
+    "subject.visit": 4827,
+    "kit.dispensed": 3848,
+    "subject.screen_failed": 293,
+    "kit.returned": 3779,
+    "subject.discontinued": 94,
+    "kit.reconciled": 3871,
+    "kit.lost": 69,
+    "subject.completed": 906,
+    "kit.expired": 67,
+    "study.enrollment_closed": 1,
+    "site.enrollment_closed": 50,
+    "site.closed": 50,
+    "study.database_lock": 1
+  }
+}
